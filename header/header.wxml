@@ -1,0 +1,10 @@
+<!--header/header.wxml-->
+<header-component>
+  <head-component />
+  <view class="btn-area">
+    <text data-id="0" bindtap='selected' class="{{index==0?'nav-active':''}}">商品</text>
+    <text data-id='1' bindtap='selected' class="{{index==1?'nav-active':''}}">评论</text>
+    <text data-id='2' bindtap='selected' class="{{index==2?'nav-active':''}}">商家</text>
+</view>
+ <content-component bind:myevent="onGetCode" index="{{index}}"/>
+</header-component>

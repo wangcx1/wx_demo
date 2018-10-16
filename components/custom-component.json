@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "header-component": "/header/header",
+    "content-component": "/content/content",
+    "footer-component": "/footer/footer"
+  }
+}

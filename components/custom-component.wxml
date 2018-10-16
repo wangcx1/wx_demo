@@ -1,0 +1,5 @@
+<!-- 组件 custom-component.wxml -->
+<custom-component>
+  <header-component />
+  <footer-component />
+</custom-component>

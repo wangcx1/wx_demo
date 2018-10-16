@@ -1,0 +1,40 @@
+<!--content1/content1.wxml-->
+<view class='container'>
+  <scroll-view scroll-y="true" style='height:452px;width:80px'>
+    <view class='menu_wrapper'>
+      <block wx:for='{{goods}}' wx:key='type' wx:for-index="index">
+        <view class='text'>
+          <text class="text_cont" class='{{currentIndex===index?"current":"text_cont"}}' data-index="{{index}}" bindtap='currentIndex'>{{goods[index].name}}</text>
+        </view>
+      </block>
+    </view>
+  </scroll-view>
+  <scroll-view scroll-y="true" style='height:452px;' bindscroll="scroll" scroll-width-animation='true' bindscrolltoupper="refresh" bindscrolltolower="loadMore" scroll-top="100" scroll-into-view="{{toView}}">
+    <view class='foods_wrapper' id="fff">
+      <view class='foods' id="{{'foods'+index}}" wx:for='{{goods}}' wx:key='name' wx:for-index='goods_index' wx:for-item="value">
+        <view class='name' class='{{currentIndex===goods_index?"nameCurrent":"name"}}'>{{value.name}}</view>
+        <view class='foods' wx:for='{{value.foods}}' wx:key='name' wx:for-index='foods_index' wx:for-item="val">
+          <view class='foods_container'>
+            <view class='foods_left'>
+              <image src='{{val.icon}}' style='width:57px;height:57px'></image>
+            </view>
+            <view class='foods_right'>
+              <view class='foods_name'>{{val.name}}</view>
+              <view class='des'>{{val.description}}</view>
+              <view class='count'>月售{{val.sellCount}},好评率{{val.rating}}%</view>
+              <view class='price'>
+                <text class='newPrice'>{{val.price}}</text>
+                <text class='oldPrice'>{{val.oldPrice}}</text>
+              </view>
+            </view>
+            <view class="addCart">
+              <view class='reduce {{cart[goods_index][foods_index]>0?"show":"hide"}}' data-goods_index="{{goods_index}}" data-foods_index="{{foods_index}}" bindtap='tapReduceCart'>-</view>
+              <view class='text {{cart[goods_index][foods_index]>0?"show":"hide"}}'>{{cart[goods_index][foods_index]}}</view>
+              <view class='add' data-goods_index="{{goods_index}}" data-foods_index="{{foods_index}}" bindtap='tapAddCart'>+</view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+</view>

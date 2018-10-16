@@ -1,0 +1,48 @@
+<!--head/head.wxml-->
+<view class='head'>
+  <view class='header'>
+    <view class="contnet-wrapper">
+      <view class='avatar'>
+        <image src='{{seller.avatar}}' style='width:128rpx;height:128rpx'></image>
+      </view>
+      <view class='content'>
+        <view class='name'>{{seller.name}}</view>
+        <view class='description'>{{seller.description}}/{{seller.deliveryTime}}分钟到达</view>
+        <view class='price'>在线支付满35减12</view>
+      </view>
+      <view class='right_count' bindtap='showDetail'>
+        <text class="count">4个</text>
+      </view>
+    </view>
+  </view>
+  <view class='bullet_wrapper'bindtap='showDetail'>
+    <text class='img'></text>
+    <text class='bullet_name'>{{seller.bulletin}}</text>
+ </view>
+ <view class='background'>
+    <image src='{{seller.avatar}}' style='width:100%; height:100%;'></image>
+  </view>
+  <view class='detail' hidden='{{condition}}'>
+      <text class='close' bindtap='close'>X</text>
+      <view class='detail_content'>
+        <view class='name'>{{seller.name}}</view>
+        <view class='detail_message'>
+          <text class="line"></text>
+          <text>优惠信息</text>
+          <text class="line"></text>
+        </view>
+        <block wx:for='{{supports}}' wx:key="unique">
+          <view class='message_content'>
+           {{supports[index].description}}
+          </view>
+        </block> 
+        <view class='detail_bulle'>
+            <text class="line"></text>
+            <text>商家公告</text>
+            <text class="line"></text>
+        </view>
+        <view class='bulle_content'>{{seller.bulletin}}</view>
+      </view>
+  </view>
+</view>
+

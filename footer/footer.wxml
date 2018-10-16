@@ -1,0 +1,22 @@
+<!--footer/footer.wxml-->
+<footer-component>
+  <view class='footer'>
+    <view class='footer_container'>
+      <view class='footer_content'>
+        <view class='footer_left'>
+          <text class='shopcart_wrapper'>
+            <text class='shopcart'>购物车</text>
+            <text class='count'>{{count}}</text>
+          </text>
+          <text class='price'>￥0元</text>
+          <text class='desc'>另需配送费￥4元</text>
+        </view>
+        <view  class='footer_right'>
+          <view class='pay not-enough'>
+            ￥26元起送
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</footer-component>

@@ -1,0 +1,25 @@
+/* header/header.wxss */
+.navigator-hover {
+    color:blue;
+}
+/** 自定义其他点击态样式类 **/
+.other-navigator-hover {
+    color:blue;
+}
+.btn-area{
+  display: flex
+}
+.btn-area text{
+  font-size: 24rpx;
+  flex: 1;
+  color: #fff;
+  align-items: center;
+  text-align: center;
+  height: 64rpx;
+  line-height: 64rpx;
+  background: #aaa;
+}
+.btn-area .nav-active{
+  background: #fff;
+  color: #000;
+}

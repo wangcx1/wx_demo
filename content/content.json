@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "contentt-component":"/content1/content1",
+    "contents-component": "/content2/content2",
+    "contentd-component": "/content3/content3",
+    "contente-component": "/content4/content4"
+  }
+}

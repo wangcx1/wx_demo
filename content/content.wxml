@@ -1,0 +1,6 @@
+<!--content/content.wxml-->
+<content-component>
+  <contentt-component class="{{index==0?'show':'hide'}}" />
+  <contents-component class="{{index==1?'show':'hide'}}" />
+  <contentd-component class="{{index==2?'show':'hide'}}" />
+</content-component>
